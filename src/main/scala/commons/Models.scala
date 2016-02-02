@@ -2,9 +2,13 @@ package com.github.edgecaseberg.rssstalker.commons
 
 import java.net.URL
 
-case class Author(val name: String) 
+trait Entity {
+	val id : Int 
+}
 
-case class Category(val name: String)
+case class Author(val name: String) extends Entity
+
+case class Category(val name: String) extends Entity
 
 case class Article(
 	val source: URL,
